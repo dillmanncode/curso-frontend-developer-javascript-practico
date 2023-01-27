@@ -63,6 +63,22 @@ function toggleMenuCart() {
 }
 
 function openProductDetailAside() {
+    const isMobileMenuClose = mobileMenu.classList.contains("inactive");
+    const isDesktopMenuClose = desktopMenu.classList.contains("inactive");
+    const isAsideCartClose = asideCart.classList.contains("inactive");
+
+    if ( !isMobileMenuClose ) {
+        mobileMenu.classList.add("inactive");
+    }
+
+    if ( !isDesktopMenuClose ) {
+        desktopMenu.classList.add("inactive");
+    }
+
+    if ( !isAsideCartClose ) {
+        asideCart.classList.add("inactive");
+    }
+
     asideDetail.classList.remove("inactive");
 }
 
